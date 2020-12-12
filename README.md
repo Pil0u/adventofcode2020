@@ -9,20 +9,28 @@ with open('input.txt') as f:
 ```
 I code everything in a Jupyter Notebook. For readability reasons, you will find each day in a distinct `.py`. Each daily challenge is divided into two parts, so there are two answers to be given. If you run each file with the appropriate input, it prints both the answers.
 
-In the following sections, I try to extract the core programming concept for each day, mostly based on how I solved it.
+In the following sections, I try to extract the core programming objects and concepts for each day, mostly based on how I solved it.
 
 ## Day 1
 
-List/Array manipulation, combinations, basic loops, conditions
+Objects: lists/arrays  
+Concepts: **combinations**, loops, conditions
 
 ## Day 2
 
-String manipulation, basic loops, conditions
+Objects: lists/arrays, strings  
+Concepts: loops, conditions
 
 ## Day 3
 
-List manipulation, string manipulation, modulo, basic loops, conditions
+Objects : **2D lists/arrays**, strings  
+Concepts: **modulo**, loops, conditions
 
 ## Day 4
+
+Objects: lists/arrays, strings, dictionnaries/hashes (probably optional), **sets** (probably optional, but so efficient)  
+Concepts: basic loops, **advanced conditions**
+
+## Day 5
 
 TODO
