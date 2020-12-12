@@ -13,8 +13,12 @@ In the following sections, I try to extract the core programming concept for eac
 
 ## Day 1
 
-List/Array manipulation, combinations
+List/Array manipulation, combinations, basic loops, conditions
 
 ## Day 2
+
+String manipulation, basic loops, conditions
+
+## Day 3
 
 TODO
