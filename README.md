@@ -13,4 +13,8 @@ In the following sections, I try to extract the core programming concept for eac
 
 ## Day 1
 
+List/Array manipulation, combinations
+
+## Day 2
+
 TODO
