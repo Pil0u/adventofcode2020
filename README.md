@@ -21,4 +21,8 @@ String manipulation, basic loops, conditions
 
 ## Day 3
 
+List manipulation, string manipulation, modulo, basic loops, conditions
+
+## Day 4
+
 TODO
