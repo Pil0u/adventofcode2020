@@ -7,7 +7,9 @@ I copy-paste my input directly into `input.txt`. To read that input, every day s
 with open('input.txt') as f:
     input_ = f.read().splitlines()
 ```
-I code everything in a Jupyter Notebook. For readability reasons, you will find each day in a distinct `.py`.
+I code everything in a Jupyter Notebook. For readability reasons, you will find each day in a distinct `.py`. Each daily challenge is divided into two parts, so there are two answers to be given. If you run each file with the appropriate input, it prints both the answers.
+
+In the following sections, I try to extract the core programming concept for each day, mostly based on how I solved it.
 
 ## Day 1
 
