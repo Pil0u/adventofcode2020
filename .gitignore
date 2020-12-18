@@ -1,6 +1,5 @@
-# Customs
+# Notebooks
 *.ipynb
-SESSION_COOKIE
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
