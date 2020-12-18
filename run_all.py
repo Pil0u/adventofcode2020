@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 SESSION_COOKIE = os.getenv('SESSION_COOKIE')
-N_REPEATS = int(os.getenv('N_REPEATS'))
+N_REPEATS = int(os.getenv('N_REPEATS')) if 'N_REPEATS' in os.environ else 1
 
 
 if __name__ == '__main__':
@@ -31,7 +31,7 @@ if __name__ == '__main__':
         first_try = timeit.Timer("f.result(input_)", setup="from __main__ import f, input_").autorange()
         n_run = first_try[0]
         timers = [first_try[1]]
-        timers.extend(timeit.Timer("f.result(input_)", setup="from __main__ import f, input_").repeat(N_REPEATS, n_run))
+        timers.extend(timeit.Timer("f.result(input_)", setup="from __main__ import f, input_").repeat(N_REPEATS-1, n_run))
 
         timings.append(1000 * min(timers) / n_run)
 
