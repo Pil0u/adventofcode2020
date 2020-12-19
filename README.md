@@ -49,14 +49,14 @@ The `--days` parameter corresponds to the filename you want to run, without the 
 As a shortcut, for any file with the `day<1-25>.py` pattern, you can also pass the integer as parameter.
 Example:
 ``` bash
-$ python3 run.py -d day14 12
+$ python3 run.py -d day14 12 06
 ```
-will run the solutions for `day14.py` and `day12.py`.  
+will run the solutions for `day14.py`, `day12.py` and `day06.py`.  
 The command line is robust to wrong parameters, so
 ``` bash
-$ python3 run.py -d day14 day964 12 50 wrong
+$ python3 run.py -d day14 day964 12 50 wrong day06
 ```
-will still run the solutions for `day14.py` and `day12.py`.
+will still run the solutions for `day14.py`, `day12.py` and `day06.py`.
 
 **Note**: If you don't specify the `--days` parameter, it will run for all the days available.
 
