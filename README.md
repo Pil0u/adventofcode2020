@@ -1,9 +1,17 @@
 # adventofcode2020
 My personal answers to https://adventofcode.com/2020 (when found...)
 
-## How to use
+## Installation
+```bash
+pip install -r requirements.txt
+```
 
-When you login once to https://adventofcode.com/, the website generates a `session` cookie with a ~ 1-month validity. You need to add a `SESSION_COOKIE` environment variable with that value for the code to work on your inputs.
+## Usage
+
+When you login once to https://adventofcode.com/, the website generates a `session` cookie with a ~ 1-month validity. Copy the value of this cookie and add it to your `.env` file:
+```
+SESSION_COOKIE=your-session-cookie
+```
 
 ### Run on one specific day
 In a shell, run:
