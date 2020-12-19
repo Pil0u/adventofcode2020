@@ -28,7 +28,11 @@ def get_args():
 
 
 def preload(name):
-    f = importlib.import_module(f"{name}").result
+    module = importlib.import_module(f"{name}")
+    if hasattr(module, 'result'):
+        f = module.result
+    else:
+        def f(input_): return f"Error: 'result(input_)' not defined in {name}.py"
 
     number = int(re.search(r"\d+", name)[0])
     response = requests.get(f'https://adventofcode.com/2020/day/{number}/input', cookies={'session': SESSION_COOKIE})
