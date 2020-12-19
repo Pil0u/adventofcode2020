@@ -15,9 +15,9 @@ N_REPEATS = int(os.getenv('N_REPEATS')) if 'N_REPEATS' in os.environ else 1
 
 def get_args():
     parser = argparse.ArgumentParser(description='Run and/or time daily challenges.')
+    parser.add_argument('-d', '--days', nargs='+')
     parser.add_argument('-t', '--timers', dest='timers', action='store_true', help='get results along with timings')
     parser.add_argument('-x', '--no-solutions', dest='solutions', action='store_false', help='get timings only')
-    parser.add_argument('-d', '--days', nargs='+', help='specify days to execute')
 
     parser.set_defaults(timers=False, solutions=True)
 
@@ -49,7 +49,7 @@ def timers(function, input_):
 def main():
     args = get_args()
 
-    allowed_days = set([file[:-3] for file in os.listdir() if re.match(r"^day.*\.py$" ,file)])
+    allowed_days = set([file[:-3] for file in os.listdir() if re.match(r"^day(0[1-9]|1\d|2[0-5]|[1-9])[^\d\.]*\.py$", file)])
     if args.days is None:
         days_to_compute = allowed_days
     else:
