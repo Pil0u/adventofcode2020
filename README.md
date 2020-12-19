@@ -1,38 +1,73 @@
 # adventofcode2020
 My personal answers to https://adventofcode.com/2020 (when found...)
 
-## Installation
+## Installation & configuration
 ```bash
 pip install -r requirements.txt
 ```
 
-## Usage
-
-When you login once to https://adventofcode.com/, the website generates a `session` cookie with a ~ 1-month validity. Copy the value of this cookie and add it to your `.env` file:
+When you login once to https://adventofcode.com/, the website generates a `session` cookie with a ~ 1-month validity. Copy the value of this cookie and add it to your `.env` file.
 ```
+# .env
 SESSION_COOKIE=your-session-cookie
 ```
-
-### Run on one specific day
-In a shell, run:
-``` bash
-python3 run.py <day>
+**(Optional)** For timings evaluation, you may specify the number of times to repeat the evaluation for each day, which equals 1 if not specified in your `.env`.
 ```
-`day` is an integer corresponding to the day you want to execute. The result with your input is then printed to you as a tuple, containing both answers for part 1 and part 2 of the daily challenge.
-
-Example with my input:
-``` bash
-~$ python3 run.py 1
-(964875, 158661360)
+# .env
+N_REPEATS=5
 ```
 
-### (WIP) Run every day at once
-In a shell, run:
+## Usage
+
+In a shell, you can run:
 ``` bash
-python3 run_all.py
+$ python3 run.py -h
+usage: run.py [-h] [-t] [-x] [-d DAYS [DAYS ...]]
+
+Run and/or time daily challenges.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -d DAYS [DAYS ...], --days DAYS [DAYS ...]
+  -t, --timers          get results along with timings
+  -x, --no-solutions    get timings only
 ```
-This will not only execute solutions for all available days, it will also compute running times using `timeit`.
-To improve measurements, you can add the environment variable `N_REPEATS` to repeat calculations and get the best timing. This value is 1 by default (i.e. played only once).
+
+The expected output is a plain dictionary with `days` as keys. Each `day` value is a dictionnary with two keys:
+- `solutions`, which value is a tuple of the two solutions of the day `(part_one, part_two)`
+- `timers_ms`, which value is a list of timings (in milliseconds) computed `N_REPEATS` times, or once if not specified *(For evalulation purpose and comparability, it is usually recommended to take the `min()` of these values)*
+
+Example of output:
+``` bash
+$ python3 run.py -t -d 1
+{'day1': {'solutions': (964875, 158661360), 'timers_ms': [72.95027375221252, 73.16023111343384, 73.55176508426666, 72.4656879901886, 71.81123793125153, 72.87500202655792, 73.03334474563599, 72.77190089225769, 72.43489027023315, 73.69080483913422]}}
+```
+
+### Days format
+
+The `--days` parameter corresponds to the filename you want to run, without the `.py` extension.
+As a shortcut, for any file with the `day<1-25>.py` pattern, you can also pass the integer as parameter.
+Example:
+``` bash
+$ python3 run.py -d day14 12
+```
+will run the solutions for `day14.py` and `day12.py`.
+The command line is robust to wrong parameters, so
+``` bash
+$ python3 run.py -d day14 day964 12 50 wrong
+```
+will still run the solutions for `day14.py` and `day12.py`.
+
+If you don't specify the `--days` parameter, it will run for all the days available.
+
+
+### Day files format
+
+Days available are found using this regular expression: `^day(0[1-9]|1\d|2[0-5]|[1-9])[^\d\.]*\.py$`
+Examples of valid names: `day1.py`, `day06.py`, `day12updated.py`, `day25_alt.py`, `day1_12.py` *(this one matches day \#1)*
+Examples of invalid names: `day00.py`, `day006.py`, `dayalt25.py`, `day_1.py`, `1day.py`, `day26.py` *(until Christmas only!)*
+
+**Important note: each daily file must contain a `result(input_)` method defined**
 
 ---
 
