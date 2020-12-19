@@ -92,4 +92,8 @@ Objects: lists/arrays, strings, dictionnaries/hashes (probably optional), **sets
 Concepts: basic loops, **advanced conditions**
 
 ## Day 5
+Objects: strings, sets
+Concepts: basic loops, **base conversion**
+
+## Day 6
 TODO
