@@ -11,7 +11,7 @@ When you login once to https://adventofcode.com/, the website generates a `sessi
 # .env
 SESSION_COOKIE=your-session-cookie
 ```
-**(Optional)** For timings evaluation, you may specify the number of times to repeat the evaluation for each day, which equals 1 if not specified in your `.env`.
+**(Optional)** For timings evaluation, you may specify the number of times to repeat the evaluation for each day. It is equal to `1` if not specified in your `.env`.
 ```
 # .env
 N_REPEATS=5
@@ -45,30 +45,32 @@ $ python3 run.py -t -d 1
 
 ### Days format
 
-The `--days` parameter corresponds to the filename you want to run, without the `.py` extension.
+The `--days` parameter corresponds to the filename you want to run, without the `.py` extension.  
 As a shortcut, for any file with the `day<1-25>.py` pattern, you can also pass the integer as parameter.
 Example:
 ``` bash
 $ python3 run.py -d day14 12
 ```
-will run the solutions for `day14.py` and `day12.py`.
+will run the solutions for `day14.py` and `day12.py`.  
 The command line is robust to wrong parameters, so
 ``` bash
 $ python3 run.py -d day14 day964 12 50 wrong
 ```
 will still run the solutions for `day14.py` and `day12.py`.
 
-If you don't specify the `--days` parameter, it will run for all the days available.
+**Note**: If you don't specify the `--days` parameter, it will run for all the days available.
 
 
 ### Day files format
 
-Days available are found using this regular expression: `^day(0[1-9]|1\d|2[0-5]|[1-9])[^\d\.]*\.py$`
-Examples of valid names: `day1.py`, `day06.py`, `day12updated.py`, `day25_alt.py`, `day1_12.py` *(this one matches day \#1)*
+Days available are found within the directory using this regular expression: `^day(0[1-9]|1\d|2[0-5]|[1-9])[^\d\.]*\.py$`
+
+Examples of valid names: `day1.py`, `day06.py`, `day12updated.py`, `day25_alt.py`, `day1_12.py` *(this one matches day \#1)*  
 Examples of invalid names: `day00.py`, `day006.py`, `dayalt25.py`, `day_1.py`, `1day.py`, `day26.py` *(until Christmas only!)*
 
-**Important note: each daily file must contain a `result(input_)` method defined**
+**Important note: daily files must contain a `result(input_)` method defined, otherwise the `day['solutions']` will contain an error**.
 
+---
 ---
 
 In the following sections, I try to extract the core programming objects and concepts for each day, mostly based on how I solved it.
