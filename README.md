@@ -126,4 +126,5 @@ Objects: basics
 Concepts: **navigation in grid**, advanced conditions
 
 ## Day 13
-TODO
+Objects: basics  
+Concepts: advanced modulo, **number theory OR smart modelization**
