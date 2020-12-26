@@ -116,3 +116,10 @@ Concepts: **advanced indexing**, combinations
 ## Day 10
 Objects: lists/arrays  
 Concepts: loops, conditions, **some weird modeling for part 2**
+
+## Day 11
+Objects: **2D lists/arrays**  
+Concepts: **advanced 2D lists/arrays manipulation**
+
+## Day 12
+TODO
