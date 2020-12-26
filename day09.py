@@ -13,6 +13,7 @@ def build_pairs(list_):
 def result(input_):
     input_ = [int(i) for i in input_]
     
+    # Part 1
     for idx, value in enumerate(input_):
         preamble = input_[idx:25+idx]
         part_one = input_[25+idx]
@@ -22,6 +23,7 @@ def result(input_):
         if part_one not in eligible:
             break
     
+    # Part 2
     for new_idx, value in enumerate(input_[:idx+25]):
         sums_ = [i for i in accumulate(input_[new_idx:idx+25])]
         

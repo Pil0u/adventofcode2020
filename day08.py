@@ -48,8 +48,10 @@ def generate_sequences(list_):
 
 
 def result(input_):
+    # Part 1
     part_one = boot(input_)[1]
 
+    # Part 2
     all_sequences = generate_sequences(input_)
     for sequence in all_sequences:
         result = boot(sequence)
