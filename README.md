@@ -96,4 +96,8 @@ Objects: strings, sets
 Concepts: basic loops, **base conversion**
 
 ## Day 6
+Objects: strings, sets
+Concepts: basic loops, **sets operations**
+
+## Day 7
 TODO
