@@ -73,42 +73,46 @@ Examples of invalid names: `day00.py`, `day006.py`, `dayalt25.py`, `day_1.py`, `
 ---
 ---
 
-In the following sections, I try to extract the core programming objects and concepts for each day, mostly based on how I solved it.
+In the following sections, I try to extract the core programming objects and concepts for each day, mostly based on how I solved it.  
+Basic strings manipulation is almost always required, the input being a giant string.
 
 ## Day 1
 Objects: lists/arrays  
 Concepts: **combinations**, loops, conditions
 
 ## Day 2
-Objects: lists/arrays, strings  
+Objects: lists/arrays  
 Concepts: loops, conditions
 
 ## Day 3
-Objects : **2D lists/arrays**, strings  
+Objects : **2D lists/arrays**  
 Concepts: **modulo**, loops, conditions
 
 ## Day 4
-Objects: lists/arrays, strings, dictionnaries/hashes (probably optional), **sets** (probably optional, but so efficient)  
+Objects: lists/arrays, dictionnaries/hashes (probably optional), **sets** (probably optional, but so efficient)  
 Concepts: loops, **advanced conditions**
 
+Improvement: use DataFrame ;-)
+
 ## Day 5
-Objects: strings, sets
+Objects: sets  
 Concepts: loops, **base conversion**
 
 ## Day 6
-Objects: strings, sets
+Objects: sets  
 Concepts: loops, **sets operations**
 
 ## Day 7
 TODO
 
 ## Day 8
-Objects: lists/arrays, strings
+Objects: lists/arrays  
 Concepts: (infinite) loops, conditions
 
 ## Day 9
-Objects: lists/arrays
+Objects: lists/arrays  
 Concepts: **advanced indexing**, combinations
 
 ## Day 10
-TODO
+Objects: lists/arrays  
+Concepts: loops, conditions, **some weird modeling for part 2**
