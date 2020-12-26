@@ -107,4 +107,8 @@ Objects: lists/arrays, strings
 Concepts: (infinite) loops, conditions
 
 ## Day 9
+Objects: lists/arrays
+Concepts: **advanced indexing**, combinations
+
+## Day 10
 TODO
