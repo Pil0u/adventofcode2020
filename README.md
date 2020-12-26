@@ -122,4 +122,8 @@ Objects: **2D lists/arrays**
 Concepts: **advanced 2D lists/arrays manipulation**
 
 ## Day 12
+Objects: basics  
+Concepts: **navigation in grid**, advanced conditions
+
+## Day 13
 TODO
