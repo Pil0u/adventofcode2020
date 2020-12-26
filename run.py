@@ -59,6 +59,8 @@ def main():
     else:
         possible_days = set(args.days + [f"day{x}" for x in args.days])
         days_to_compute = possible_days.intersection(allowed_days)
+    
+    days_to_compute = sorted(days_to_compute)
 
     print(f"""
         Days to compute:\t{', '.join(days_to_compute)}
