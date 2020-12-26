@@ -89,15 +89,22 @@ Concepts: **modulo**, loops, conditions
 
 ## Day 4
 Objects: lists/arrays, strings, dictionnaries/hashes (probably optional), **sets** (probably optional, but so efficient)  
-Concepts: basic loops, **advanced conditions**
+Concepts: loops, **advanced conditions**
 
 ## Day 5
 Objects: strings, sets
-Concepts: basic loops, **base conversion**
+Concepts: loops, **base conversion**
 
 ## Day 6
 Objects: strings, sets
-Concepts: basic loops, **sets operations**
+Concepts: loops, **sets operations**
 
 ## Day 7
+TODO
+
+## Day 8
+Objects: lists/arrays, strings
+Concepts: (infinite) loops, conditions
+
+## Day 9
 TODO
