@@ -92,7 +92,7 @@ Concepts: **modulo**, loops, conditions
 Objects: lists/arrays, dictionnaries/hashes (probably optional), **sets** (probably optional, but so efficient)  
 Concepts: loops, **advanced conditions**
 
-Improvement: use DataFrame ;-)
+Improvements: use DataFrame ;-)
 
 ## Day 5
 Objects: sets  
@@ -103,7 +103,8 @@ Objects: sets
 Concepts: loops, **sets operations**
 
 ## Day 7
-TODO
+Objects: hashes/dictionaries, sets
+Concepts: **recursion**
 
 ## Day 8
 Objects: lists/arrays  
